@@ -12,8 +12,8 @@ button.onclick = function () {
                 
                 
             }
-             request.open('GET', 'http://http://joardaraditya.imad.hasura-app.io/counter' , true);
-             request.send(null);
+             httpRequest.open('GET', 'http://http://joardaraditya.imad.hasura-app.io/counter' , true);
+             httpRequest.send(null);
         }
        
     };
