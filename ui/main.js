@@ -3,8 +3,8 @@ var button = document.getElementById('counter');
 button.onclick = function () {
     //Make a request to the counter endpoint
     var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if(reuest.readystate === XMLHttpRequest.DONE){
+    httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if(request.status === 200) {
                 var counter = request.responseText;
                 var span = document.getElementById('count');
@@ -12,9 +12,10 @@ button.onclick = function () {
                 
                 
             }
+             request.open('GET', 'http://http://joardaraditya.imad.hasura-app.io/counter' , true);
+             request.send(null);
         }
-        request.open('GET', 'http://http://joardaraditya.imad.hasura-app.io/counter' , true);
-        request.send(null);
+       
     };
     
     
